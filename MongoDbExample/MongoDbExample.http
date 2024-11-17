@@ -1,0 +1,43 @@
+@MongoDbExample_HostAddress = http://localhost:5189
+
+### Get All Todo List
+GET {{MongoDbExample_HostAddress}}/todos
+Accept: application/json
+
+###
+
+### Get todo list matching id
+GET {{MongoDbExample_HostAddress}}/todos/6739bc7b3f2d402d5157b564
+Accept: application/json
+
+###
+
+### Add Todo
+POST {{MongoDbExample_HostAddress}}/todos
+Content-Type: application/json
+
+{
+    "title": "Complete the project",
+    "isCompleted": false,
+    "createdDate": "2024-11-17T10:00:00Z"
+}
+
+###
+
+### Update Todo
+PUT {{MongoDbExample_HostAddress}}/todos/6739bc7b3f2d402d5157b564
+Content-Type: application/json
+
+{
+    "title": "Complete the project",
+    "isCompleted": true,
+    "createdDate": "2024-11-17T10:00:00Z"
+}
+
+###
+
+### Delete Todo
+DELETE {{MongoDbExample_HostAddress}}/todos/6739bc7b3f2d402d5157b564
+Accept: application/json
+
+###
